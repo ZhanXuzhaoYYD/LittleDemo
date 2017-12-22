@@ -48,12 +48,14 @@
         <activity android:name=".activity.ScrollNumberActivity" />
         <activity
             android:name=".activity.CustomViewActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:hardwareAccelerated="false" />
+            android:hardwareAccelerated="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".activity.AnimationActivity01"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
-        <activity android:name=".activity.AnimationActivity02"></activity>
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity android:name=".activity.AnimationActivity02" />
+        <activity android:name=".activity.ScrollTextActivity" />
+        <activity android:name=".activity.SaveInstanceActivity"></activity>
     </application>
 
 </manifest>

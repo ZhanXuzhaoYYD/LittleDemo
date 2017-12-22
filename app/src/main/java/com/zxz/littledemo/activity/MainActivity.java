@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void launchNext() {
-        startActivity(new Intent(this, AnimationActivity01.class));
+        startActivity(new Intent(this, SaveInstanceActivity.class));
         finish();
     }
 
