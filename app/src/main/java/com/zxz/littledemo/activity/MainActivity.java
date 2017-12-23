@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.zxz.littledemo.R;
+import com.zxz.littledemo.view.ScrollText;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void launchNext() {
-        startActivity(new Intent(this, SaveInstanceActivity.class));
+        startActivity(new Intent(this, ScrollTextActivity.class));
         finish();
     }
 

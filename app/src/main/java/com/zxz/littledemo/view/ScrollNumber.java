@@ -17,6 +17,8 @@ import android.view.animation.Interpolator;
  * Created by wuhaojie on 2016/7/15 11:36.
  */
 public class ScrollNumber extends View {
+    private long mDrawCount;
+    public long mPostTime;
 
     public static final String TAG = "ScrollNumber";
     /**
@@ -183,6 +185,9 @@ public class ScrollNumber extends View {
 
 
         if (mCurNum != mTargetNum) {
+            long postTime = System.currentTimeMillis();
+            System.out.println(mDrawCount + " post-post time gap: " + (postTime - mPostTime));
+            mPostTime = postTime;
             postDelayed(mScrollRunnable, 0);
         }
 
@@ -213,6 +218,8 @@ public class ScrollNumber extends View {
     private Runnable mScrollRunnable = new Runnable() {
         @Override
         public void run() {
+            long runTime = System.currentTimeMillis();
+            System.out.println(mDrawCount++ + " run-post time gap: " + (runTime - mPostTime));
             float x = (float) (1 - 1.0 * (mTargetNum - mCurNum) / mDeltaNum);
 //            mOffset -= 0.15f * (1 - mInterpolator.getInterpolation(x) + 0.1);
             mOffset -= mVelocity * 0.01f * (1 - mInterpolator.getInterpolation(x) + 0.1);

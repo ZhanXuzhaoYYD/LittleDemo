@@ -12,6 +12,10 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+        System.out.println(String.format("y1: %4.1f,\t y2: %4.1f,\t shift: %4.1f,\t ", 1.1f,2.1f,113.1f));
+    }
+
+    private long cTime() {
+        return System.currentTimeMillis();
     }
 }
